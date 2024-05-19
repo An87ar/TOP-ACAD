@@ -15,6 +15,7 @@
 
 // Exercise 4
 let radius = prompt('Укажите радиус окружности');
+alert(Math.PI)
 let area = Math.PI * (radius ** 2)
 alert(`Площад окружности = ${area.toFixed(2)}`)
 
