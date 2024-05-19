@@ -135,8 +135,67 @@
 /*------------------------------------------------------------*/
 // Exercise 9
 
+// alert('Ответьте на 3 вопроса. За каждый правильный ответ вам будет начислино 2 балла')
+// let question1 = prompt('Столица Турции (выберите вариант ответа): А: Стамбул, Б: Анкара, В: Анталья')
+// let question2 = prompt('Столица Швейцарии (выберите вариант ответа): А: Берн, Б: Цюрих, В: Базель')
+// let question3 = prompt('Столица Италии: А: Турин, Б: Милан, В: Рим')
+
+// if (question1 == 'Б' && question2 == 'А' && question3 == 'В')
+// 	alert('Вы набрали 6 балла')
+// else if ((question1 == 'Б' && question2 == 'А' && question3 != 'В') ||
+// 	(question1 != 'Б' && question2 == 'А' && question3 == 'В') ||
+// 	(question1 == 'Б' && question2 != 'А' && question3 == 'В'))
+// 	alert('Вы набрали 4 балла')
+// else if ((question1 == 'Б' && question2 != 'А' && question3 != 'В') ||
+// 	(question1 != 'Б' && question2 == 'А' && question3 != 'В') ||
+// 	(question1 != 'Б' && question2 != 'А' && question3 == 'В'))
+// 	alert('Вы набрали 2 балла')
+// else
+// 	alert('Вы не правильно ответили на вопросы. Баллов - 0')
+
+/*------------------------------------------------------------*/
+// Exercise 10
+alert('Введите дату числами: день, месяц, год')
 
 
+let date = Number(prompt("Введите число месяца от 1 до 31: "))
+let month = Number(prompt("Введите порядковый номер месяца от 1 до 12: "))
+let year = Number(prompt("Введите год: "))
+
+if (date < 1 || date > 31 || month < 1 || month > 12) {
+	alert("Вы некорректно указали данные");
+}
+
+let leapYear = 0;
+
+if (((year % 400 == 0) || (year % 4 == 0)) && (year % 100 != 0)) {
+	leapYear = 1;
+	alert("Введенный вами год является високосным");
+}
+
+let nextDate = date + 1;
+let nextMonth = month;
+let nextYear = year;
+
+if ((nextDate > 31 && (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10))
+	|| (nextDate > 30 && (month == 4 || month == 6 || month == 9 || month == 11))) {
+	nextDate = 1;
+	nextMonth += 1;
+}
+
+if (nextDate > 31 && month == 12) {
+	nextDate = 1;
+	nextMonth = 1;
+	nextYear = year + 1;
+}
+
+// Високосный год
+if ((nextDate > 28 && month == 2) || (nextDate > 29 && month == 2 && leapYear == 1)) {
+	nextDate = 1
+	nextMonth = 3
+}
+
+alert(`Следующяя дата ${nextDate}.${nextMonth}.${nextYear}`)
 
 
 
