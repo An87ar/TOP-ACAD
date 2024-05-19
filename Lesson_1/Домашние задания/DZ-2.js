@@ -124,13 +124,12 @@
 
 /*------------------------------------------------------------*/
 // Exercise 8
-// const pi = 3.14
-// let length = prompt('Укажите длинну окружности')
-// let perimeter = prompt('Укажите периметр квадрата')
-// let diametr = length / pi
-// let squareLength = perimeter / 4
-// let message = (diametr <= squareLength) ? 'Окружность помещается в квадрат' : 'Окружность в квадрат не помещается';
-// alert(message)
+let length = prompt('Укажите длинну окружности')
+let perimeter = prompt('Укажите периметр квадрата')
+let diametr = length / Math.PI
+let squareLength = perimeter / 4
+let message = (diametr <= squareLength) ? 'Окружность помещается в квадрат' : 'Окружность в квадрат не помещается';
+alert(message)
 
 /*------------------------------------------------------------*/
 // Exercise 9
@@ -155,47 +154,47 @@
 
 /*------------------------------------------------------------*/
 // Exercise 10
-alert('Введите дату числами: день, месяц, год')
+// alert('Введите дату числами: день, месяц, год')
 
 
-let date = Number(prompt("Введите число месяца от 1 до 31: "))
-let month = Number(prompt("Введите порядковый номер месяца от 1 до 12: "))
-let year = Number(prompt("Введите год: "))
+// let date = Number(prompt("Введите число месяца от 1 до 31: "))
+// let month = Number(prompt("Введите порядковый номер месяца от 1 до 12: "))
+// let year = Number(prompt("Введите год: "))
 
-if (date < 1 || date > 31 || month < 1 || month > 12) {
-	alert("Вы некорректно указали данные");
-}
+// if (date < 1 || date > 31 || month < 1 || month > 12) {
+// 	alert("Вы некорректно указали данные");
+// }
 
-let leapYear = 0;
+// let leapYear = 0;
 
-if (((year % 400 == 0) || (year % 4 == 0)) && (year % 100 != 0)) {
-	leapYear = 1;
-	alert("Введенный вами год является високосным");
-}
+// if (((year % 400 == 0) || (year % 4 == 0)) && (year % 100 != 0)) {
+// 	leapYear = 1;
+// 	alert("Введенный вами год является високосным");
+// }
 
-let nextDate = date + 1;
-let nextMonth = month;
-let nextYear = year;
+// let nextDate = date + 1;
+// let nextMonth = month;
+// let nextYear = year;
 
-if ((nextDate > 31 && (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10))
-	|| (nextDate > 30 && (month == 4 || month == 6 || month == 9 || month == 11))) {
-	nextDate = 1;
-	nextMonth += 1;
-}
+// if ((nextDate > 31 && (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10))
+// 	|| (nextDate > 30 && (month == 4 || month == 6 || month == 9 || month == 11))) {
+// 	nextDate = 1;
+// 	nextMonth += 1;
+// }
 
-if (nextDate > 31 && month == 12) {
-	nextDate = 1;
-	nextMonth = 1;
-	nextYear = year + 1;
-}
+// if (nextDate > 31 && month == 12) {
+// 	nextDate = 1;
+// 	nextMonth = 1;
+// 	nextYear = year + 1;
+// }
 
-// Високосный год
-if ((nextDate > 28 && month == 2) || (nextDate > 29 && month == 2 && leapYear == 1)) {
-	nextDate = 1
-	nextMonth = 3
-}
+// // Високосный год
+// if ((nextDate > 28 && month == 2) || (nextDate > 29 && month == 2 && leapYear == 1)) {
+// 	nextDate = 1
+// 	nextMonth = 3
+// }
 
-alert(`Следующяя дата ${nextDate}.${nextMonth}.${nextYear}`)
+// alert(`Следующяя дата ${nextDate}.${nextMonth}.${nextYear}`)
 
 
 

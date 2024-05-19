@@ -1,7 +1,7 @@
 
 // Exercise 1
-let userName = prompt('как тебя зовут?');
-alert(`Привет ${userName}!`)
+// let userName = prompt('как тебя зовут?');
+// alert(`Привет ${userName}!`)
 
 // Exercise 2
 // const year = 2024;
@@ -14,9 +14,9 @@ alert(`Привет ${userName}!`)
 // alert(`Периметр квадрата = ${4 * width}`)
 
 // Exercise 4
-// const pi = 3.14
-// let width = prompt('Укажите радиус окружности');
-// alert(`Площад окружности = ${pi * (width ** 2)}`)
+let radius = prompt('Укажите радиус окружности');
+let area = Math.PI * (radius ** 2)
+alert(`Площад окружности = ${area.toFixed(2)}`)
 
 // Exercise 5
 // let distance = prompt('Укажите расстояние между городами в километрах');
