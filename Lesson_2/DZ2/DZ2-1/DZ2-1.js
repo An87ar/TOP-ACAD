@@ -128,14 +128,14 @@
 /*---------------------------------------------------*/
 // Exercise 9
 
-// table:
-// for (let i = 2; i <= 3; i++) {
-// 	for (let k = 1; k <= 10; k++) {
-// 		let sum = i * k;
-// 		if (i === 3) break table;
-// 		alert(`таблица ${i} * ${k} = ${sum}`)
-// 	}
-// }
+table:
+for (let i = 2; i <= 3; i++) {
+	for (let k = 1; k <= 10; k++) {
+		let sum = i * k;
+		if (i === 3) break table;
+		alert(`таблица ${i} * ${k} = ${sum}`)
+	}
+}
 
 
 
