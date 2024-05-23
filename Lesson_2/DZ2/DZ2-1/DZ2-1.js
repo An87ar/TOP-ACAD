@@ -121,9 +121,10 @@ if (moveNum < array.length) {
 	for (let j = 0; j < moveNum; j++) {
 		result.push(array[j])
 	}
+alert(result.join(''))
+
 } else alert("Число для сдвига больше или равно длинне числа.")
 
-alert(result.join(''))
 
 /*---------------------------------------------------*/
 // Exercise 8
