@@ -32,17 +32,18 @@
 
 /*---------------------------------------------------*/
 // Exercise 4
-// let num = Number(prompt("Введите число"))
+// let num = prompt("Введите число")
 // let sum = 0
 
 // while (true) {
 // 	if (Math.floor(num) != 0) {
 // 		num = num / 10;
 // 		sum++;
-// 		if (Math.floor(num) == 0) break;
 // 	}
+// 	else break;
 // }
-// alert(`В введенном числе ${num} количество цифр: ` + sum)
+
+// alert('В введенном числе количество цифр: ' + sum)
 
 /*---------------------------------------------------*/
 // Exercise 5
@@ -106,6 +107,25 @@
 // }
 
 /*---------------------------------------------------*/
+// Exercise 7
+
+// let num = prompt("Введите число")
+// let array = num.split('')
+// let mooveNum = prompt("На сколько сдвинуть цифры числа? ")
+// let result = [];
+
+// if (mooveNum < array.length) {
+// 	for (let i = (mooveNum); i < array.length; i++) {
+// 		result.push(array[i]);
+// 	}
+// 	for (let j = 0; j < mooveNum; j++) {
+// 		result.push(array[j])
+// 	}
+// } else alert("Число для сдвига больше или равно длинне числа.")
+
+// alert(result.join(''))
+
+/*---------------------------------------------------*/
 // Exercise 8
 
 // do {
@@ -128,19 +148,18 @@
 /*---------------------------------------------------*/
 // Exercise 9
 
-let result = ''
+// let result = ''
 
-for (let i = 2; i <= 9; i++) {
-	for (let k = 1; k <= 10; k++) {
-		let sum = i * k;
-			result += `таблица ${i} * ${k} = ${sum} \n`
-	}
-}
+// for (let i = 2; i <= 9; i++) {
+// 	for (let k = 1; k <= 10; k++) {
+// 		let sum = i * k;
+// 			result += `таблица ${i} * ${k} = ${sum} \n`
+// 	}
+// }
+// alert(result)
 
-alert(result)
-
-
-
+/*---------------------------------------------------*/
+// Exercise 10
 
 
 
