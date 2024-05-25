@@ -109,21 +109,21 @@
 /*---------------------------------------------------*/
 // Exercise 7
 
-// let num = prompt("Введите число")
-// let array = num.split('')
-// let moveNum = prompt("На сколько сдвинуть цифры числа? ")
-// let result = [];
+let num = prompt("Введите число")
+let array = num.split('')
+let moveNum = prompt("На сколько сдвинуть цифры числа? ")
+let result = [];
 
-// if (moveNum < array.length) {
-// 	for (let i = (moveNum); i < array.length; i++) {
-// 		result.push(array[i]);
-// 	}
-// 	for (let j = 0; j < moveNum; j++) {
-// 		result.push(array[j])
-// 	}
-// 	alert(result.join(''))
+if (moveNum < array.length) {
+	for (let i = (moveNum); i < array.length; i++) {
+		result.push(array[i]);
+	}
+	for (let j = 0; j < moveNum; j++) {
+		result.push(array[j])
+	}
+	alert(result.join(''))
 
-// } else alert("Число для сдвига больше или равно длинне числа.")
+} else alert("Число для сдвига больше или равно длинне числа.")
 
 
 /*---------------------------------------------------*/
