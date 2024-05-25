@@ -109,21 +109,21 @@
 /*---------------------------------------------------*/
 // Exercise 7
 
-let num = prompt("Введите число")
-let array = num.split('')
-let moveNum = prompt("На сколько сдвинуть цифры числа? ")
-let result = [];
+// let num = prompt("Введите число")
+// let array = num.split('')
+// let moveNum = prompt("На сколько сдвинуть цифры числа? ")
+// let result = [];
 
-if (moveNum < array.length) {
-	for (let i = (moveNum); i < array.length; i++) {
-		result.push(array[i]);
-	}
-	for (let j = 0; j < moveNum; j++) {
-		result.push(array[j])
-	}
-alert(result.join(''))
+// if (moveNum < array.length) {
+// 	for (let i = (moveNum); i < array.length; i++) {
+// 		result.push(array[i]);
+// 	}
+// 	for (let j = 0; j < moveNum; j++) {
+// 		result.push(array[j])
+// 	}
+// 	alert(result.join(''))
 
-} else alert("Число для сдвига больше или равно длинне числа.")
+// } else alert("Число для сдвига больше или равно длинне числа.")
 
 
 /*---------------------------------------------------*/
@@ -162,6 +162,21 @@ alert(result.join(''))
 /*---------------------------------------------------*/
 // Exercise 10
 
+// let low = 0;
+// let middle = 0;
+// let high = 100;
+// let condition = "";
 
-
-
+// while (low <= high) {
+// 	middle = Math.trunc((low + high) / 2);
+// 	condition = prompt(
+// 		`Вы загадали число ${middle}? Введите без кавычек "=", если это так. В противном случае, если искомое число меньше, введите "<", либо же ">", если оно больше. Опять же, без кавычек.`
+// 	);
+// 	if (condition == ">") {
+// 		low = middle + 1;
+// 	} else if (condition == "<") {
+// 		high = middle - 1;
+// 	} else {
+// 		low = high + 1;
+// 	}
+// }
