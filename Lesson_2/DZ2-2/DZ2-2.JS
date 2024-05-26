@@ -105,26 +105,86 @@ function perfectNumber(num) {
 /*---------------------------------------*/
 // Exercise 7
 
-function time(hour, minute, second) {
-	if (!minute && !second) {
-		minute = '00';
-		second = '00';
-	}
-	else if ((minute > 0 && minute < 10)
-		&& (second > 0 && second < 10)) {
-		minute = '0' + minute;
-		second = '0' + second
-	}
-	else if (minute > 0 && minute < 10) { minute = '0' + minute }
-	else if (second > 0 && second < 10) { second = '0' + second }
-	alert(`Вы ввели время: "${hour} : ${minute} : ${second}"`)
+// function time(hour, minute, second) {
+// 	if (!minute && !second) {
+// 		minute = '00';
+// 		second = '00';
+// 	}
+// 	else if ((minute > 0 && minute < 10)
+// 		&& (second > 0 && second < 10)) {
+// 		minute = '0' + minute;
+// 		second = '0' + second
+// 	}
+// 	else if (minute > 0 && minute < 10) { minute = '0' + minute }
+// 	else if (second > 0 && second < 10) { second = '0' + second }
+// 	alert(`Вы ввели время: "${hour} : ${minute} : ${second}"`)
+// }
+
+// let hour = +prompt('Введите час (от 0 до 24)')
+// let minute = +prompt('Введите минуту')
+// let second = +prompt('Введите секунду')
+
+// time(hour, minute, second)
+
+/*---------------------------------------*/
+// Exercise 8
+
+function timeToSecond(hour, minute, second) {
+	if (!minute || !second || !hour) { alert('Введенное значение не корректно.') }
+	let result = hour * 3600 + minute * 60 + second
+	return result;
 }
 
-let hour = +prompt('Введите час (от 0 до 24)')
-let minute = +prompt('Введите минуту')
-let second = +prompt('Введите секунду')
+// let hour = +prompt('Введите час (от 0 до 24)')
+// let minute = +prompt('Введите минуту')
+// let second = +prompt('Введите секунду')
+// alert(`Вы ввели время: "${hour} : ${minute} : ${second}" - это ${timeToSecond(hour, minute, second)} секунд`)
 
-time(hour, minute, second)
+
+/*---------------------------------------*/
+// Exercise 9
+
+function secondToTime(digit) {
+	let hour = 0;
+	let minute = 0;
+	let second = 0;
+	if (digit >= 3600) { hour = Math.floor(digit / 3600); } else hour = 0;
+	if (digit >= 60) { minute = Math.floor((digit - hour * 3600) / 60); } else minute = 0;
+	if (digit < 60) { second = digit; } else second = digit - hour * 3600 - minute * 60;
+
+	return `${hour} (чч) : ${minute} (мм): ${second} (сек.)`
+}
+
+// let digit = +prompt('Введите число в секундах')
+
+// alert(secondToTime(digit))
+
+/*---------------------------------------*/
+// Exercise 10
+
+let hour1 = +prompt('Введите начальное время: час (от 0 до 24)')
+let minute1 = +prompt('Введите минуту')
+let second1 = +prompt('Введите секунду')
+let hour2 = +prompt('Введите конечное время: час (от 0 до 24)')
+let minute2 = +prompt('Введите минуту')
+let second2 = +prompt('Введите секунду')
+
+let digitInSecond1 = timeToSecond(hour1, minute1, second1);
+let digitInSecond2 = timeToSecond(hour2, minute2, second2);
+
+let result = digitInSecond2 - digitInSecond1;
+
+alert('Разница между временными отрезками: ' + secondToTime(result))
+
+
+
+
+
+
+
+
+
+
 
 
 
