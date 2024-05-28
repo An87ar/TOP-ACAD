@@ -1,0 +1,94 @@
+class Human {
+    constructor(firstName, lastName){
+        this.firstName = firstName
+        this.lastName = lastName
+    }
+    
+    sayHi(){
+        alert(`hello ${this.firstName}`)
+    }
+}
+
+let driver = new Human("Andrey", "Ivanov")
+
+console.log(driver)
+driver.sayHi()
+
+let programmer =new Human ("Dmitriy", "Dmitrievich")
+programmer.sayHi()
+
+/*-------------------------------------------------*/
+
+const Status = {
+    DRAFT: "Chernovik",
+    WORK: "Rabochiy"
+}
+
+class BaseDocument {
+    constructor(number, status){
+        this.number = number
+        this.status = status
+    }
+    
+    getStatus(){
+        alert(this.status)
+    }
+}
+
+let baseDocument = new BaseDocument (0, Status.DRAFT)
+
+console.log(baseDocument)
+baseDocument.getStatus()
+
+/*-------------------------------------------------*/
+
+//class Contract extends BaseDocument{}
+
+//let contract = new Contract(1, Status.WORK)
+//console.log(contract)
+
+/*-------------------------------------------------*/
+
+class Contract extends BaseDocument{
+   constructor(number, status, name){
+       super(number, status)
+       this.name = name
+   } 
+   getStatus(){
+       alert(`Dlia dogovora - ${this.name} status - ${this.status}`)
+   }
+}
+
+
+
+
+
+let contract = new Contract(1, Status.WORK, "Dogovor1")
+console.log(contract)
+contract.getStatus()
+
+/*-------------------------------------------------*/
+
+
+class CoffeeMachine {
+    _waterAmount = 0
+    
+    set waterAmount(value) {
+        if(value < 0) console.log("Error")
+        if(value > 0) {
+            console.log(`Water - ${value}`)
+            this._waterAmount = value
+            
+        }
+    }
+    
+    constructor(power) {
+        this.power = power
+        alert(`Sozdana kofevarka s moshnotiu: ${power}`)
+    }
+}
+
+let coffeeMachine = new CoffeeMachine(100)
+
+coffeeMachine.waterAmount = -10
+
