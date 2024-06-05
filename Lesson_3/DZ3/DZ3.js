@@ -40,10 +40,21 @@
 // bigDigitOfNumber(num);
 // alert(`Big digit of number ${num} is ${Math.max.apply(null, b)}`)
 
+/*---------------------------------------*/
+// Exercise 4
 
+// function recursia(divisible, divider = 0) {
+// 	// if (divisible <= 1) { return console.log("Not correct number") }
+// 	if (divisible % divider == 0 && divider != 1 && divisible != divider) {
+// 		return console.log("number is not prime")
+// 	}
+// 	if (divisible === divider) { return console.log("number is prime") }
 
+// 	recursia(divisible, divider + 1)
+// }
 
-
+// // recursia(10)
+// recursia(107)
 
 
 
